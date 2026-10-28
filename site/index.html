@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Porser blog tasarım seçenekleri</title>
+  <link rel="icon" href="/icon.png">
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/ole4qyp.css">
+  <style>
+    :root {
+      --zemin: #f7f3ea;
+      --panel: #efe8d9;
+      --murekkep: #1c1815;
+      --murekkep-2: #3d362e;
+      --murekkep-3: #6b6357;
+      --cizgi: #e3dccc;
+      --mercan: #e29578;
+      --mercan-koyu: #a8492c;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      min-height: 100dvh;
+      background: var(--zemin);
+      color: var(--murekkep);
+      font: 300 16px/1.6 "museo-sans", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .sayfa { max-width: 84rem; margin: 0 auto; padding: 28px 20px 56px; }
+    @media (min-width: 768px) { .sayfa { padding: 40px 48px 72px; } }
+    .logo { display: block; width: 118px; height: auto; }
+    header { margin-top: 44px; display: grid; gap: 16px; }
+    @media (min-width: 960px) {
+      header { margin-top: 56px; grid-template-columns: minmax(0, 1fr) 24rem; align-items: end; gap: 48px; }
+    }
+    h1 {
+      font-family: "utopia-std-display", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.4rem, 4.8vw, 4.4rem);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      text-wrap: balance;
+    }
+    header p { color: var(--murekkep-2); font-size: 1rem; max-width: 42ch; }
+    ul.secenekler {
+      list-style: none; padding: 0;
+      margin-top: 36px; border-top: 1px solid var(--murekkep); padding-top: 28px;
+      display: grid; gap: 36px 28px;
+    }
+    @media (min-width: 640px) { ul.secenekler { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1100px) { ul.secenekler { grid-template-columns: repeat(4, 1fr); } }
+    .secenek a { display: flex; flex-direction: column; color: inherit; text-decoration: none; height: 100%; }
+    .gorsel {
+      display: block; border-radius: 10px; overflow: hidden; background: var(--panel);
+      aspect-ratio: 16 / 10;
+      box-shadow: 0 22px 44px -28px rgba(28, 24, 21, .45), 0 0 0 1px rgba(28, 24, 21, .06);
+    }
+    .gorsel img {
+      display: block; width: 100%; height: 100%; object-fit: cover; object-position: top;
+      transition: transform .7s cubic-bezier(.23, 1, .32, 1);
+    }
+    .baslik { display: flex; align-items: baseline; gap: 12px; margin-top: 18px; }
+    .no {
+      font-family: "utopia-std-display", Georgia, serif;
+      font-size: 3.2rem; line-height: .8; color: var(--mercan);
+    }
+    .ad {
+      font-family: "utopia-std-display", Georgia, serif;
+      font-size: 1.75rem; line-height: 1.05; letter-spacing: -0.01em;
+      transition: color .2s ease;
+    }
+    .aciklama { margin-top: 10px; color: var(--murekkep-2); font-size: .93rem; line-height: 1.55; }
+    .git {
+      margin-top: auto; padding-top: 14px; width: fit-content;
+      font-weight: 500; font-size: .9rem;
+    }
+    .git span { border-bottom: 1px solid var(--mercan); padding-bottom: 2px; }
+    @media (hover: hover) and (pointer: fine) {
+      .secenek a:hover .ad { color: var(--mercan-koyu); }
+      .secenek a:hover .gorsel img { transform: scale(1.03); }
+    }
+    .secenek a:focus-visible { outline: 2px solid var(--mercan-koyu); outline-offset: 6px; border-radius: 6px; }
+    footer {
+      margin-top: 44px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px;
+      color: var(--murekkep-3); font-size: .85rem;
+    }
+    kbd {
+      font: 500 .8rem/1 "museo-sans", system-ui, sans-serif;
+      border: 1px solid var(--cizgi); border-bottom-width: 2px; border-radius: 5px;
+      padding: 2px 6px; background: #fbf8f1; color: var(--murekkep-2);
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <div class="sayfa">
+    <img class="logo" src="/__onizleme/porser-logo.svg" alt="Porser">
+
+    <header>
+      <h1>Blog için hangi tasarımı görmek istersiniz?</h1>
+      <p>Dört seçenek aynı yazıları farklı biçimde gösteriyor. Birini açın; sayfaların üstündeki seçiciyle (telefonda sol altta) aynı yazıyı öbür seçeneklerde de görebilirsiniz.</p>
+    </header>
+
+    <ul class="secenekler">
+      <li class="secenek">
+        <a href="/blog">
+          <span class="gorsel"><img src="/__onizleme/secenek-1.jpg" alt="Klasik seçeneğin blog sayfası" width="1280" height="800"></span>
+          <span class="baslik"><span class="no">1</span><span class="ad">Klasik</span></span>
+          <span class="aciklama">Öne çıkan yazı büyük kartla en üstte, diğer yazılar fotoğraflı kart ızgarasında.</span>
+          <span class="git"><span>Seçenek 1'i aç</span></span>
+        </a>
+      </li>
+      <li class="secenek">
+        <a href="/blog2">
+          <span class="gorsel"><img src="/__onizleme/secenek-2.jpg" alt="Dergi seçeneğinin blog sayfası" width="1280" height="800"></span>
+          <span class="baslik"><span class="no">2</span><span class="ad">Dergi</span></span>
+          <span class="aciklama">Dergi başlığı gibi tam genişlikte sayfa adı ve kenardan kenara kapak; yazılar içindekiler listesinde.</span>
+          <span class="git"><span>Seçenek 2'yi aç</span></span>
+        </a>
+      </li>
+      <li class="secenek">
+        <a href="/blog3">
+          <span class="gorsel"><img src="/__onizleme/secenek-3.jpg" alt="Sofradan rafa seçeneğinin blog sayfası" width="1280" height="800" ></span>
+          <span class="baslik"><span class="no">3</span><span class="ad">Sofradan rafa</span></span>
+          <span class="aciklama">Yazılar içinde geçen ürünlerle birlikte; okur yazıları ürüne göre süzebiliyor.</span>
+          <span class="git"><span>Seçenek 3'ü aç</span></span>
+        </a>
+      </li>
+      <li class="secenek">
+        <a href="/blog4">
+          <span class="gorsel"><img src="/__onizleme/secenek-4.jpg" alt="Sakin okuma seçeneğinin blog sayfası" width="1280" height="800" ></span>
+          <span class="baslik"><span class="no">4</span><span class="ad">Sakin okuma</span></span>
+          <span class="aciklama">Aylara göre sade bir dizin; yazı sayfasında serif metin, yazı boyutu ayarı ve kalan okuma süresi.</span>
+          <span class="git"><span>Seçenek 4'ü aç</span></span>
+        </a>
+      </li>
+    </ul>
+
+    <footer>
+      <span>Klavyeden <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd> tuşlarıyla da seçebilirsiniz.</span>
+      <span>Önizleme sayfasıdır; yazılar ve fotoğraflar örnek içeriktir.</span>
+    </footer>
+  </div>
+  <script>
+    document.addEventListener("keydown", function (e) {
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      var yollar = { "1": "/blog", "2": "/blog2", "3": "/blog3", "4": "/blog4" };
+      if (yollar[e.key]) location.assign(yollar[e.key]);
+    });
+  </script>
+</body>
+</html>
